@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let tablica = Array()
+
+        for (let i = 65; i < 91; i++) {
+            tablica.push(String.fromCharCode(i))
+
+        }
+        function tekst(event) {
+            alert(event.srcElement.innerHTML);
+
+        }
+        let tablicaa = tablica.map(function (x) {
+
+            b = document.createElement('button');
+            b.innerHTML = x
+            b.addEventListener("click", tekst)
+            document.body.appendChild(b);
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>
